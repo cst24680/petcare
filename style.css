@@ -48,11 +48,13 @@ nav{
 
 .hero{
     height:90vh;
-    background:linear-gradient(
+    background:
+    linear-gradient(
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     ),
     url('https://images.unsplash.com/photo-1517849845537-4d257902454a?w=1600');
+
     background-size:cover;
     background-position:center;
     display:flex;
@@ -76,10 +78,14 @@ nav{
     padding:12px 30px;
     background:#ff6b6b;
     color:white;
-    border:none;
-    border-radius:30px;
     text-decoration:none;
+    border-radius:30px;
     font-weight:600;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#ff4c4c;
 }
 
 section{
@@ -101,7 +107,7 @@ section{
 
 article{
     background:white;
-    padding:25px;
+    padding:20px;
     border-radius:15px;
     text-align:center;
     box-shadow:0 5px 15px rgba(0,0,0,0.1);
@@ -123,8 +129,8 @@ article img{
 .about{
     display:flex;
     flex-wrap:wrap;
-    gap:40px;
     align-items:center;
+    gap:40px;
 }
 
 .about img{
@@ -135,6 +141,11 @@ article img{
 
 .about-text{
     flex:1;
+    min-width:300px;
+}
+
+.about-text h3{
+    margin-bottom:15px;
 }
 
 .gallery{
@@ -148,6 +159,11 @@ article img{
     height:250px;
     object-fit:cover;
     border-radius:15px;
+    transition:0.3s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
 }
 
 footer{
@@ -155,4 +171,23 @@ footer{
     color:white;
     text-align:center;
     padding:25px;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .nav-links{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .hero-content h1{
+        font-size:2.5rem;
+    }
 }
