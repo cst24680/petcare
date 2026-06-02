@@ -48,15 +48,15 @@ nav{
 
 .hero{
     height:90vh;
+
+    /* ✅ NEW MODERN BACKGROUND IMAGE */
     background:
-    linear-gradient(
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-    ),
-    url('https://images.unsplash.com/photo-1517849845537-4d257902454a?w=1600');
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url('https://images.unsplash.com/photo-1601758123927-196b3f2b9f6b?w=1600');
 
     background-size:cover;
     background-position:center;
+
     display:flex;
     justify-content:center;
     align-items:center;
@@ -75,17 +75,19 @@ nav{
 }
 
 .btn{
-    padding:12px 30px;
+    display:inline-block;
+    padding:14px 32px;
     background:#ff6b6b;
     color:white;
     text-decoration:none;
-    border-radius:30px;
+    border-radius:50px;
     font-weight:600;
     transition:0.3s;
 }
 
 .btn:hover{
     background:#ff4c4c;
+    transform:translateY(-3px);
 }
 
 section{
@@ -144,10 +146,6 @@ article img{
     min-width:300px;
 }
 
-.about-text h3{
-    margin-bottom:15px;
-}
-
 .gallery{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -173,8 +171,7 @@ footer{
     padding:25px;
 }
 
-/* Responsive */
-
+/* RESPONSIVE */
 @media(max-width:768px){
 
     nav{
