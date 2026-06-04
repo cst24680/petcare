@@ -13,10 +13,13 @@ body{
     line-height:1.6;
 }
 
-/* HEADER */
+/* ==========================
+   HEADER
+========================== */
 
 header{
-    background:rgb(255, 255, 255);
+    background:rgba(255,255,255,0.95);
+    backdrop-filter:blur(10px);
     position:sticky;
     top:0;
     z-index:1000;
@@ -33,9 +36,9 @@ nav{
 }
 
 .logo{
-    font-size:1.8rem;
+    font-size:1.9rem;
     font-weight:700;
-    color:#58132a;
+    color:#ff6b6b;
 }
 
 .nav-links{
@@ -46,7 +49,7 @@ nav{
 
 .nav-links a{
     text-decoration:none;
-    color:#501616;
+    color:#333;
     font-weight:500;
     transition:0.3s;
 }
@@ -55,22 +58,19 @@ nav{
     color:#ff6b6b;
 }
 
-/* HERO */
+/* ==========================
+   HERO SECTION
+========================== */
 
 .hero{
     height:90vh;
 
     background:
-<<<<<<< HEAD
-    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-    url('https://images.unsplash.com/photo-1450778869180-41d0601e046e?q=80&w=1286&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-=======
     linear-gradient(
         rgba(0,0,0,0.55),
         rgba(0,0,0,0.55)
     ),
     url('https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=1600&q=80');
->>>>>>> 5aec64b97aada435de9fd0ae3341a9303c82c789
 
     background-size:cover;
     background-position:center;
@@ -91,6 +91,7 @@ nav{
 .hero-content h1{
     font-size:4rem;
     margin-bottom:20px;
+    text-shadow:0 4px 15px rgba(0,0,0,0.3);
 }
 
 .hero-content p{
@@ -98,7 +99,9 @@ nav{
     margin-bottom:30px;
 }
 
-/* BUTTONS */
+/* ==========================
+   BUTTONS
+========================== */
 
 .hero-buttons{
     display:flex;
@@ -115,12 +118,13 @@ nav{
     text-decoration:none;
     border-radius:50px;
     font-weight:600;
-    transition:0.3s;
+    transition:all 0.3s ease;
 }
 
 .btn:hover{
     background:#ff4c4c;
-    transform:translateY(-3px);
+    transform:translateY(-4px);
+    box-shadow:0 10px 20px rgba(255,107,107,0.3);
 }
 
 .secondary-btn{
@@ -132,20 +136,24 @@ nav{
     background:#f2f2f2;
 }
 
-/* SECTIONS */
+/* ==========================
+   GENERAL SECTIONS
+========================== */
 
 section{
-    padding:80px 10%;
+    padding:90px 10%;
 }
 
 .section-title{
     text-align:center;
     margin-bottom:50px;
     font-size:3rem;
-    color:#ff6b6b;
+    color:#e85d5d;
 }
 
-/* SERVICES */
+/* ==========================
+   SERVICES
+========================== */
 
 .services{
     display:grid;
@@ -159,17 +167,17 @@ article{
     border-radius:18px;
     text-align:center;
     box-shadow:0 5px 15px rgba(0,0,0,0.08);
-    transition:0.3s;
+    transition:all 0.3s ease;
 }
 
 article:hover{
     transform:translateY(-12px);
-    box-shadow:0 12px 25px rgba(0,0,0,0.15);
+    box-shadow:0 15px 30px rgba(0,0,0,0.15);
 }
 
 article img{
     width:100%;
-    height:250px;
+    height:280px;
     object-fit:cover;
     border-radius:12px;
     margin-bottom:15px;
@@ -177,9 +185,12 @@ article img{
 
 article h3{
     margin-bottom:10px;
+    color:#444;
 }
 
-/* ABOUT */
+/* ==========================
+   ABOUT SECTION
+========================== */
 
 .about{
     display:flex;
@@ -192,6 +203,7 @@ article h3{
     width:100%;
     max-width:500px;
     border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
 
 .about-text{
@@ -202,13 +214,16 @@ article h3{
 .about-text h3{
     margin-bottom:15px;
     font-size:2rem;
+    color:#444;
 }
 
 .about-text p{
     font-size:1.1rem;
 }
 
-/* STATS */
+/* ==========================
+   STATS
+========================== */
 
 .stats{
     background:white;
@@ -216,10 +231,16 @@ article h3{
     grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
     gap:20px;
     text-align:center;
+    border-radius:20px;
 }
 
 .stat-box{
     padding:30px;
+    transition:0.3s;
+}
+
+.stat-box:hover{
+    transform:translateY(-5px);
 }
 
 .stat-box h2{
@@ -233,7 +254,9 @@ article h3{
     font-size:1.1rem;
 }
 
-/* GALLERY */
+/* ==========================
+   GALLERY
+========================== */
 
 .gallery{
     display:grid;
@@ -246,7 +269,7 @@ article h3{
     height:250px;
     object-fit:cover;
     border-radius:15px;
-    transition:0.4s;
+    transition:all 0.4s ease;
 }
 
 .gallery img:hover{
@@ -254,7 +277,9 @@ article h3{
     box-shadow:0 10px 20px rgba(0,0,0,0.15);
 }
 
-/* TESTIMONIALS */
+/* ==========================
+   TESTIMONIALS
+========================== */
 
 #testimonials article{
     padding:30px;
@@ -269,7 +294,9 @@ article h3{
     font-style:italic;
 }
 
-/* CONTACT */
+/* ==========================
+   CONTACT BANNER
+========================== */
 
 .contact-banner{
     background:#ff6b6b;
@@ -288,7 +315,9 @@ article h3{
     margin:10px 0;
 }
 
-/* FOOTER */
+/* ==========================
+   FOOTER
+========================== */
 
 footer{
     background:#222;
@@ -297,7 +326,9 @@ footer{
     padding:25px;
 }
 
-/* RESPONSIVE */
+/* ==========================
+   TABLET
+========================== */
 
 @media(max-width:768px){
 
@@ -337,3 +368,27 @@ footer{
         font-size:1.6rem;
     }
 }
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media(max-width:500px){
+
+    .stats{
+        grid-template-columns:1fr;
+    }
+
+    .hero-content h1{
+        font-size:2.1rem;
+    }
+
+    article img{
+        height:220px;
+    }
+
+    .section-title{
+        font-size:2rem;
+    }
+}
+
